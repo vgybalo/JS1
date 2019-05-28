@@ -1,32 +1,31 @@
+function a_value(o) {
+    let number1 = o.value;
+    console.log(number1);
+}
+function a_value2(o) {
+    let number2 = o.value;
+    console.log(number2);
+}
+function a_value3(o) {
+    let act = o.value;
+    console.log(act);
+}
 
-let arr = [1, 2, 'apple', 'orange', 3, 4, ['pine', 'eve', 'rose'], 5, 6, ['red', 'green', 'blue'], true, 7, 8, 'stone'];
-let string = [];
-let number = [];
-for (let i = 0; i<arr.length; i++) {
-    let element = arr[i];
-    if (typeof element == 'string') {
-        string.push(element);
+
+function Result (number1, number2, act) {
+    let result = null;
+    if (act = '+') {
+        result = number1 + number2;
+        console.log(number1);
+        console.log(number2);
+        /*console.log(result);*/
     }
-    else if (typeof element == 'number') {
-        number.push(element);
+    else if (act = '-') {
+        result = number1 - number2;
+        console.log(result);
     }
-    else if (typeof element == 'object') {
-        for (let j = 0; j<element.length; j++) {
-            let inner_element = element[j];
-            if (typeof inner_element == 'string') {
-                string.push(inner_element);
-            }
-            else if (typeof inner_element == 'number') {
-                number.push(inner_element);
-            }
-        }
+    else {
+        console.log('неправильное действие');
     }
 }
 
-for (let k = 0; k<string.length; k++) {
-    console.log(string[k]);
-}
-
-for (let l = 0; l<number.length; l++) {
-    console.log(number[l]);
-}

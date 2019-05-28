@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript</title>
+    <title>Калькулятор</title>
 </head>
 <body>
+
+<form action="" method="post" enctype="multipart/form-data" style="width: 450px;">
+    <fieldset>
+        <legend>Калькулятор</legend>
+        <table>
+
+            <tr>
+
+                <td width="200px">
+                    <input type="text" id="number1"  name="number1"  placeholder="Введите число1" onchange="a_value(this);"><br>
+                </td>
+                <td width="200px">
+                    <input type="text" id="operation"  name="operation"  placeholder="Введите + или -" onchange="a_value3(this);"><br>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <input type="text" id="number2"  name="number2"  placeholder="Введите число2" onchange="a_value2(this);"><br>
+                </td>
+                <td >
+                    <input align="right" type="submit" onsubmit="Result()" value="Результат">
+                </td>
+            </tr>
+        </table>
+
+
+
+    </fieldset>
+</form>
+
+
+
+
 <script src="main.js"></script>
 </body>
-</html>
