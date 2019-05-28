@@ -11,7 +11,6 @@ function a_value3(o) {
     console.log(act);
 }
 
-
 function Result (number1, number2, act) {
     let result = null;
     if (act = '+') {
