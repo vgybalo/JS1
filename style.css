@@ -1,0 +1,14 @@
+.imagemain {
+    max-width: 800px;
+    max-height: 500px;
+}
+.imgsmallblock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagesmalldiv {
+    padding: 5px;
+    /*background-size: contain;
+    float: left;*/
+}
