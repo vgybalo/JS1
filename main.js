@@ -1,22 +1,30 @@
-let imgsmall = document.querySelector('.imagesmall');
-let imagemain = document.querySelector('.imagemain');
-const maincrs = imagemain.src;
-let imagessmall = document.querySelectorAll('.imagesmall');
-for (let i = 0; i<imagessmall.length; i++) {
+let input = document.querySelector('input');
+let addValue = document.querySelector('#addbutton');
+let cleanValue = document.querySelector('#cleanbutton');
+let calculate = document.querySelector('#calculate');
+let inputValues = [];
 
-    /*let smallcrs = document.querySelector(src_id).src;*/
-    /*console.log(imagemain.src);
-     console.log(imagessmall[i].src);*/
-    imagessmall[i].addEventListener('mouseover', function () {
-            imagemain.src = imagessmall[i].src;
-            /*document.querySelector(src_id).src = maincrs;
-             /*imagessmall[i].crs = maincrs;
-             console.log(maincrs);*/
+addValue.addEventListener('click', function () {
 
-        }
-    );
+        inputValues.push(input.value);
+        console.log(inputValues);
+    }
+);
 
-    imagessmall[i].addEventListener('mouseout', function () {
-        imagemain.src = maincrs;
-    })
+cleanValue.addEventListener('click', function () {
+        inputValues.pop();
+        console.log(inputValues);
+    }
+);
+
+calculate.addEventListener('click', calc );
+
+
+function calc () {
+    let b= 1;
+    for (let i = 0; i < inputValues.length; i++) {
+        b *= Number(inputValues[i]);
+    }
+    let c = b/ inputValues.length;
+    console.log(c);
 }
