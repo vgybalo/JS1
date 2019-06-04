@@ -5,8 +5,8 @@ let calculate = document.querySelector('#calculate');
 let output = document.querySelector('#output');
 let inputValues = [];
 let c = 0;
-addValue.addEventListener('click', function () {
 
+addValue.addEventListener('click', function () {
         inputValues.push(input.value);
         console.log(inputValues);
     }
