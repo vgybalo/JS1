@@ -1,67 +1,59 @@
-
-let addbutton = document.querySelector('#addbutton');
 let input1 = document.querySelector('#input1');
-let block1 = document.querySelector('.block1');
-let main_form = document.querySelector('.main_form');
-/*let block2 = document.querySelector('.block2');
- let h1_2 = document.querySelector('.block2_h1');*/
-let i = 1;
-
-addbutton.addEventListener('click', function () {
-    let div = document.createElement('div');
-    let input2 = document.createElement('input');
-    let div2 = document.createElement('div');
+let input2 = document.querySelector('#input2');
+let add_oper = document.querySelector('#addbutton');
+let minus_oper = document.querySelector('#minusbutton');
+let mult_oper = document.querySelector('#multbutton');
+let div_oper = document.querySelector('#divbutton');
+let calculate_oper = document.querySelector('#calculate');
+let output = document.querySelector('#output');
 
 
-    //let inner_div1 = document.querySelector('.block2');
+let number1 = null;
+let number2 = null;
+let result = null;
 
-
-    div.innerHTML = input1.value;
-    input2.type = 'button';
-    input2.value = '-';
-    div.id = i-1;
-    i++;
-    console.log(i);
-
-    block1.appendChild(div);
-    div.appendChild(input2);
-    div.appendChild(div2);
-    div2.innerHTML = i-1;
-
-    /*e.target.addEventListener('click', function () {
-     div2.innerHTML = i;
-     i++;
-     });*/
-    for (let i = 0; i < main_form.childNodes.length; i++) {
-        //console.log(main_form.childNodes[i])
-        console.log(main_form.childNodes.index);
-
-    }
-
-
-    input2.addEventListener('click', function() {
-
-        div.remove();
-
-        i++;
+input1.addEventListener('change', function () {
+    number1 = Number(input1.value);
+    console.log(number1);
     });
-
-
-    //block1.insertBefore(div, block1.children[0]);
-    div.style.width = '200px';
-    div.style.height = '100px';
-    div.style.backgroundColor = "#fa0";
-
+input2.addEventListener('change', function () {
+    number2 = Number(input2.value);
+    console.log(number2);
 });
 
 
 
 
+calculate = {
+     numb1 : number1,
+     numb2 : number2,
+    result : null,
+
+        add : function  () {
+        result = number1 + number2;
+        console.log(result);
+    },
+        minus : function  () {
+        result = number1 - number2;
+        console.log(result);
+    },
+        mult : function  () {
+        result = number1 * number2;
+        console.log(result);
+    },
+        devide : function  () {
+        result = number1 / number2;
+        console.log(result);
+    },
+        display : function  () {
+        output.value = result;
+    }
+
+};
 
 
-
-
-
-
-
-
+add_oper.addEventListener('click', calculate.add );
+minus_oper.addEventListener('click', calculate.minus );
+mult_oper.addEventListener('click', calculate.mult );
+div_oper.addEventListener('click', calculate.devide );
+calculate_oper.addEventListener('click',  calculate.display );
