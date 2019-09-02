@@ -1,0 +1,11 @@
+{
+  "name": "31082019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "readFile.js",
+  "scripts": {
+    "start": "readFile.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
